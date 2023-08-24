@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Mindbox.Figure.Api.props" />
+</Project>
