@@ -1,5 +1,7 @@
 using Mindbox.Figure.Lib.Interfaces;
 
+namespace Mindbox.Figure.Lib;
+
 // Для соблюдения принципов SOLID создаётся базовый абстрактный класс всех фигур с углами,
 // который реализует интерфес IFigureWithCorners
 public abstract class FiguresWithCornersModel : IFigureWithCorners
@@ -9,7 +11,7 @@ public abstract class FiguresWithCornersModel : IFigureWithCorners
     public bool? IsContainsRightAngle { get; set; }
 
     // Помимо площади, у фигур с углами должна быть задана как минимум одна длина отрезка
-    protected int Line1Width { get; init; }
+    public int Line1Width { get; init; }
 
     // Метод получения площади фигуры
     public virtual double GetArea() =>
@@ -23,13 +25,13 @@ public abstract class FiguresWithCornersModel : IFigureWithCorners
 // Базовый класс для фигур с двумя разными(возможно) отрезками
 public abstract class FiguresWith2CornersModel : FiguresWithCornersModel
 {
-    protected int Line2Width { get; init; }
+    public int Line2Width { get; init; }
 }
 
 // Базовый класс для фигур с тремя разными(возможно) отрезками
 public abstract class FiguresWith3CornersModel : FiguresWith2CornersModel
 {
-    protected int Line3Width { get; init; }
+    public int Line3Width { get; init; }
 }
 
 // Класс треуголников
@@ -58,13 +60,13 @@ public class Triangle : FiguresWith3CornersModel
     // Проверка треугольника на наличие прямого угла 
     public override bool CheckIsContainsRightAngle()
     {
-        if (Line3Width > Line1Width && Line3Width > Line2Width)
+        if (Line3Width >= Line1Width && Line3Width >= Line2Width)
             return (bool)(IsContainsRightAngle =
                 Line1Width * Line1Width + Line2Width * Line2Width == Line3Width * Line3Width);
-        if (Line1Width > Line2Width && Line1Width > Line3Width)
+        if (Line1Width >= Line2Width && Line1Width >= Line3Width)
             return (bool)(IsContainsRightAngle =
                 Line3Width * Line3Width + Line2Width * Line2Width == Line1Width * Line1Width);
-        if (Line2Width > Line1Width && Line2Width > Line3Width)
+        if (Line2Width >= Line1Width && Line2Width >= Line3Width)
             return (bool)(IsContainsRightAngle =
                 Line3Width * Line3Width + Line1Width * Line1Width == Line2Width * Line2Width);
         
@@ -123,23 +125,6 @@ public class Rectangle : FiguresWith2CornersModel
 // Поэтому квадрат будет наследоваться от FiguresWithCornersModel
 public class Square : FiguresWithCornersModel
 {
-    // Дополнительные варианты реализации конструкторов, которые могут быть, но являются избыточными для данной задачи
-    /*public Square(int line1Width, int line2Width, int line3Width, int line4Width)
-    {
-        if ((line1Width == line2Width) && (line2Width == line3Width) && (line3Width == line4Width))
-            Line1Width = line1Width;
-        else
-            throw new Exception("Данная фигура не является квадратом");
-    }
-    
-    public Square(int line1Width, int line2Width)
-    {
-        if (line1Width == line2Width)
-            Line1Width = line1Width;
-        else
-            throw new Exception("Данная фигура не является квадратом");
-    }*/
-    
     public Square(int line1Width) =>
             Line1Width = line1Width;
     

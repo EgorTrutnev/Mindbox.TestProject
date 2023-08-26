@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Mindbox.Figure.Lib;
+
 
 namespace Mindbox.Figure.Api.Controllers;
 

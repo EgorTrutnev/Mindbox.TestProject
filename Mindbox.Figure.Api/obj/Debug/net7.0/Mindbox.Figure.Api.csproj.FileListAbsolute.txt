@@ -29,7 +29,7 @@ C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\st
 C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\scopedcss\bundle\Mindbox.Figure.Api.styles.css
 C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\Mindbox.Figure.Api.csproj.CopyComplete
 C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\Mindbox.Figure.Api.dll
-C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\refint\Mindbox.Figure.Api.dll
 C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\Mindbox.Figure.Api.pdb
 C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\Mindbox.Figure.Api.genruntimeconfig.cache
+C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\refint\Mindbox.Figure.Api.dll
 C:\Users\Egor\Desktop\Mindbox.TestProject\Mindbox.Figure.Api\obj\Debug\net7.0\ref\Mindbox.Figure.Api.dll

@@ -1,5 +1,7 @@
 using Mindbox.Figure.Lib.Interfaces;
 
+namespace Mindbox.Figure.Lib;
+
 // Абстрактый класс дял всех круговых фигур
 public abstract class FiguresСircularModel : IFigure
 {
@@ -34,6 +36,8 @@ public class Oval : FiguresСircularModel
     {
         if (radius1 <= 0 || radius2 <= 0)
             throw new Exception("Радиус овала указан некорректно");
+        else if (radius1 == radius2)
+            throw new Exception("Это круг, а не овал");
             
         Radius = radius1;
         Radius2 = radius2;
