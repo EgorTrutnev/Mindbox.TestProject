@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Mindbox.Figure.Api.props" />
-</Project>
